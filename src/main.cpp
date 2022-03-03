@@ -34,6 +34,7 @@ ESP8266HTTPUpdateServer atualizadorOTA; //(OTA)
 ESP8266WebServer servidorWeb(80); //Servidor Web na porta 80
 
 
+
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Sensores e acionamento
@@ -255,7 +256,6 @@ void loop() {
   }
   else {
       servidorWeb.handleClient(); 
-       httpServer.handleClient();
   MDNS.update();
   if (ledTimer.check())
   {
